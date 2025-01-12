@@ -15,4 +15,4 @@ class main():
 
         break
 
-main()
+main() # type: ignore
