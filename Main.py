@@ -1,4 +1,5 @@
 import sys
+import CLASS
 
 
 class main():
@@ -8,11 +9,9 @@ class main():
 
     while True:
 
-        if inicio is "S" :
+        if inicio == "S" :
           list_Modify =  input("\n" "Wichi list do you want to modify/add : ").upper()
-
-
-
         break
 
-main() # type: ignore
+main() 
+CLASS.add()
