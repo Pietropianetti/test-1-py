@@ -36,9 +36,8 @@ class dado:
 				Print("Don't exist")
 				
 		info.remove(self.name)
+
 		with open(self.Lista, "w") as file:
 			
 			json.dump(info , file)
 		
-		
-dado("oi","d").add()
