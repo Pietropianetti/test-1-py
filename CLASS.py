@@ -13,22 +13,32 @@ class dado:
 			with open(self.Lista, "r") as file:
 				
 				info = json.load(file)
-				print(infoq{)
 			
 		except FileNotFoundError: 
+		
 				info = [ ]
 				
-		print(info)	
-			
-		info.append(self.Name ) 
-		
-		print(info)
+		info.append(self.Name)
 		
 		with open(self.Lista, "w") as file:
+			
 			json.dump(info , file)
-	
-		print(self.Name)
-		print(self.Lista)
+
+	def remove(self):
+
+		try:
+			with open(self.Lista, "r") as file:
+				
+				info = json.load(file)
+			
+		except FileNotFoundError: 
+		
+				Print("Don't exist")
+				
+		info.remove(self.name)
+		with open(self.Lista, "w") as file:
+			
+			json.dump(info , file)
 		
 		
 dado("oi","d").add()
