@@ -2,42 +2,49 @@ import sys
 import json
 
 class dado:
-	def  __init__ (self, Lista , Name):
-		self.Lista = f"{Lista}.json"
-		self.Name = Name.rsplit(" , ")
-		
-	def add(self):
+    def  __init__ (self, Lista , Name= None):
+        self.Lista = f"{Lista}.json"
+        self.Name = Name
+        
+    def add(self):
 
-		try:
-			with open(self.Lista, "r") as file:
-				
-				info = json.load(file)
-			
-		except FileNotFoundError: 
-		
-				info = [ ]
-			
-		for name in self.Name:
-			
-			info.append(name)
-			
-		with open(self.Lista, "w") as file:
-			
-			json.dump(info , file)
+        name_l = self.Name.rsplit(",")
 
-	def remove(self):
+        try:
+            with open(self.Lista, "r") as file:
+                
+                info = json.load(file)
+            
+        except FileNotFoundError: 
+        
+                info = [ ]
+            
+        for name in name_l:
+            
+            info.append(name)
+            
+        with open(self.Lista, "w") as file:
+            
+            json.dump(info , file)
 
-		try:
-			with open(self.Lista, "r") as file:
-				
-				info = json.load(file)
-			
-		except FileNotFoundError: 
-		
-				Print("Don't exist")
-				
-		info.remove(self.name)
-		with open(self.Lista, "w") as file:
-			
-			json.dump(info , file)
-		
+    def re(self):
+
+        try:
+            with open(self.Lista, "r") as file:
+                
+                info = json.load(file)
+            
+        except FileNotFoundError: 
+        
+                print("Don't exist")
+                
+        info.remove(self.Name)
+
+        with open(self.Lista, "w") as file:
+            
+            json.dump(info , file)
+    
+    def ver (self):
+        with open(self.Lista, "r") as file:
+             
+             return json.load(file)
