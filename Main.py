@@ -4,7 +4,7 @@ import Oi
 class main:
 		def __init__(self):
 		  
-		  	acao = input("\n You would like to add or remove").upper()
+		  	acao = input("\n You would like to add or remove : ").upper()
 		  	
 		  	if acao == "ADD" :
 		  
