@@ -1,5 +1,6 @@
 import sys
 import json
+import os
 
 class dado:
     def  __init__ (self, Lista , Name= None):
@@ -28,7 +29,6 @@ class dado:
             json.dump(info , file)
 
     def re(self):
-
         try:
             with open(self.Lista, "r") as file:
                 
@@ -48,3 +48,14 @@ class dado:
         with open(self.Lista, "r") as file:
              
              return json.load(file)
+             
+class apagar ():
+  
+  def __init__ (self) :
+    
+    def animar (sleep) :
+      
+      time.sleep(sleep)
+      
+      os.system("cls" if os.name == "nt" else "clear")
+    def apagar1

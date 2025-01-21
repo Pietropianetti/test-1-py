@@ -15,8 +15,13 @@ class main:
             CLASS.dado(list_Modify, name_add).add()
 
             print(CLASS.dado(list_Modify).ver())
+        if acao == "REMOVE" :
+          print(5)
 
-print("Welcome" "\n" "Let's star" "\n" "Do you want to add/remove something on the liste")
+print("Welcome") 
+CLASS.apagar()
+print("Let's star")
+print("Do you want to add/remove something on the liste")
     
 user = input("S for Yes and N to Nope : ").upper()
 
