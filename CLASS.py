@@ -57,5 +57,8 @@ class apagar ():
       
       time.sleep(sleep)
       
-      os.system("cls" if os.name == "nt" else "clear")
-    def apagar1
+      os.system("cls" if os.name == "nt" else 
+      
+    def repido (self):
+      
+      os.system("cls" if os.name == "nt" else
