@@ -35,10 +35,30 @@ def bordar(canvas):
         canvas[i][j] = f"■"
 
 class cobra_corpo():      
-  def __init__(self,Canvas,PosicaoY , PosicaoX):
-    self.canvas = Canvas
-    self.posicaoX = PosicaoX
-    self.posicaoY = PosicaoY
+  def __init__(self,Canvas,Tipo):
+    
+    inicializacao = False
+    
+  self.tipo = Tipo
+  self.canvas = Canvas
+    
+  if inicializacao = False
+    lista = []
+    inicializacao =True
+    
+  def cobra(posicaoY,posicaoX) :
+      
+    def criar(posicaoY,posicaoX,**kwargs):
+        
+        cordenada = { "tipo": self.tipo "X" : posicaoY , "Y" : posicaoX}
+        
+        cordenada.update(kwargs)
+        return cordenada
+      
+        lista.append(criar(posicaoY, posicaoX))
+    
+    
+    
     
     canvas[self.posicaoY][self.posicaoX] = "■"
 
@@ -54,7 +74,7 @@ while a < 300:
   
   canvas = canvas_esqueto(24,20)
   bordar(canvas)
-  cobra_corpo(canvas,17 , posicaoX)
+  cobra_corpo()
   canvas_imprecao(canvas)
   render()
 
