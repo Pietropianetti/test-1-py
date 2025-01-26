@@ -1,6 +1,7 @@
 import sys
 import json
 import os
+import time
 
 class dado:
     def  __init__ (self, Lista , Name= None):
@@ -57,8 +58,8 @@ class apagar ():
       
       time.sleep(sleep)
       
-      os.system("cls" if os.name == "nt" else 
+      os.system("cls" if os.name == "nt" else "clear")
       
     def repido (self):
       
-      os.system("cls" if os.name == "nt" else
+      os.system("cls" if os.name == "nt" else "clear")
