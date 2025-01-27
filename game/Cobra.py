@@ -1,7 +1,8 @@
 import time 
 import random
 import os
-
+import keyboard
+import sys
 def render():
   
   return os.system("cls" if os.name == "nt" else"clear")
@@ -48,26 +49,43 @@ class OBJETOS():
     global lista
     lista = []
     inicializacao = True
+    global comida
+    comida = []
     
   def objeto(self,posicaoY,posicaoX) :   
         
     cordenada = dict({ "tipo": self.tipo , "X" : posicaoY , "Y" : posicaoX})
 
-    lista.append(cordenada)
+    if self.tipo == "cobra":
+      lista.append(cordenada)
+
+    if self.tipo == "comida" :
+       comida.append(cordenada)
+       
+  def printe(self):
+
+    for i in comida :
+      self.canvas[i.get("Y")][i.get("X")] = "*"
 
     for i in lista :
-      self.canvas [i.get("Y")][i.get("X")] = "■"
+        self.canvas [i.get("Y")][i.get("X")] = "■"
+        
+A = 0
+while True:
 
-a = 0    
-while a < 300:
-  a += 1
-  
+  A += 1
+
   canvas = canvas_esqueto(24,20)
   bordar(canvas)
   OBJETOS(canvas,"cobra").objeto(8,9)
+  OBJETOS(canvas,"comida").objeto(4,9)
+  OBJETOS(canvas,"cobra").printe()
+  OBJETOS(canvas,"comida").printe()
   canvas_imprecao(canvas)
-  print(OBJETOS)
+  print(A)
+  time.sleep(0.5)
   render()
+  
 
       
     
