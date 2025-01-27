@@ -69,7 +69,17 @@ class OBJETOS():
 
     for i in lista :
         self.canvas [i.get("Y")][i.get("X")] = "■"
-        
+
+class MOVE():
+
+  def cima():
+     
+  def baixo():
+     
+  def esquerdo():
+     
+  def direito():
+  
 A = 0
 while True:
 
@@ -83,7 +93,7 @@ while True:
   OBJETOS(canvas,"comida").printe()
   canvas_imprecao(canvas)
   print(A)
-  time.sleep(0.5)
+  time.sleep(0.1)
   render()
   
 
