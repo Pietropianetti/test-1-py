@@ -1,4 +1,4 @@
-import sys
+smport sys
 import CLASS
 
 class main:
