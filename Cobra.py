@@ -72,7 +72,15 @@ class OBJETOS():
 
 class MOVE():
 
-  def cima():
+  def __init__(self,last):
+    self.last = last 
+
+  
+
+  def cima(self.last):
+
+    if self.last !=   
+
     lista [0]["Y"] -= 1
     
     if lista [0]["Y"] == 0:
@@ -86,9 +94,15 @@ class MOVE():
     
   def esquerdo():
     lista[0]["X"] -= 1
+
+    if lista[0]["X"] == 0:
+      sys.exit()
     
   def direito():
     lista[0]["X"] += 1
+
+    if lista[0]["X"] == len(canvas[0]):
+      sys.exit()
     
 A = 0
 while True:
@@ -105,25 +119,24 @@ while True:
   OBJETOS(canvas,"cobra").printe()
   OBJETOS(canvas,"comida").printe()
   
-  #key = keyboard.read_event()
-  
-  #if key.name == "w":
-    #MOVE.cima()
-  #if key.name == "s":
-    #MOVE.baixo()
-  #if key.name == "a":
-    #MOVE.esquerdo()
-  #if key.name == "d":
-    #MOVE.direito()
-    
-  
-  
-  
-  MOVE.baixo()
-  
   canvas_imprecao(canvas)
+
+
+  keyboard.hook_key("d",lambda e: MOVE.baixo() if e.event_type == "down" else None)
+
+
+  '''
+  if key.name == "w":
+    MOVE.cima()
+  if key.name == "s":
+    MOVE.baixo()
+  if key.name == "a":
+    MOVE.esquerdo()
+  if key.name == "d":
+    MOVE.direito()
+'''
   print(A)
-  time.sleep(0.1)
+  time.sleep(2)
   render()
   
 
